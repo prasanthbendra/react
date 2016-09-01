@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Link } from 'react-router';
 
 export default class Header extends React.Component {
 
@@ -18,10 +19,10 @@ export default class Header extends React.Component {
                     </div>
                     <div className="collapse navbar-collapse">
                         <ul className="nav navbar-nav navbar-right">
-                            <li className="active"><a href="index.html">Home</a></li>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li className="active"><Link to="">Home</Link></li>
+                            <li><Link to="about">About Us</Link></li>
+                            <li><Link to="services">Services</Link></li>
+                            <li><Link to="portfolio">Portfolio</Link></li>
                             <li className="dropdown">
                                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Pages <i className="icon-angle-down"></i></a>
                                 <ul className="dropdown-menu">
