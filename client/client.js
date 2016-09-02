@@ -4,10 +4,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 import App from '../src/app';
 import Home from '../src/home/home';
-import About from '../src/page/about/about';
-import Services from '../src/page/services/services';
-import Portfolio from '../src/page/portfolio/portfolio';
-import Contact from '../src/page/contact/contact';
+import { About, Services, Portfolio, Contact } from '../src/page';
 
 render(
     <Router history={hashHistory}>
