@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 export default class Page extends React.Component {
 
     render(){
-        let {title, description} = this.props;
+        const { title, description, children } = this.props;
         return (
             <div>
                 <section id="title" class="emerald body-section">
@@ -23,7 +23,7 @@ export default class Page extends React.Component {
                         </div>
                     </div>
                 </section>
-                {this.props.children}
+                { children }
             </div>
         );
     }
