@@ -8,10 +8,12 @@ import Footer from './shared/footer/footer';
 export default class App extends React.Component {
 
     render(){
+        const { children } = this.props;
+
         return (
             <div>
                 <Header/>
-                {this.props.children}
+                { children }
                 <Bottom/>
                 <Footer/>
             </div>
