@@ -1,4 +1,5 @@
 module.exports = {
+    devtool: "inline-sourcemap",
     entry: ['./client/client.js'],
     output: {
         path: './dist',
@@ -10,7 +11,8 @@ module.exports = {
             {
                 test: /.js$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                plugins: ['react-html-attrs', 'transform-class-properties', 'tranform-decorators-legacy']
             }
         ]
     }

@@ -30,7 +30,7 @@ render(
             <Route path="registration" component={Registration}></Route>
             <Route path="privacy" component={Privacy}></Route>
             <Route path="terms" component={Terms}></Route>
-            <Route path="blog" component={Blog}></Route>
+            <Route path="blog(/:blogTitle)" component={Blog}></Route>
         </Route>
     </Router>,
     document.getElementById('app')
