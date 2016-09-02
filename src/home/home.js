@@ -5,7 +5,6 @@ import Slider from './slider/slider';
 import Services from './services/services';
 import Works from './works/works';
 import Testimonial from './testimonial/testimonial';
-import Bottom from './bottom/bottom';
 
 export default class Home extends React.Component {
 
@@ -16,7 +15,6 @@ export default class Home extends React.Component {
                 <Services/>
                 <Works/>
                 <Testimonial/>
-                <Bottom/>
             </div>
         );
     }

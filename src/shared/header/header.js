@@ -37,7 +37,7 @@ export default class Header extends React.Component {
                                 </ul>
                             </li>
                             <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><Link to="contact">Contact</Link></li>
                         </ul>
                     </div>
                 </div>
