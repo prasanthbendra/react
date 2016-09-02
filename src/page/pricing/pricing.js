@@ -8,22 +8,22 @@ export default class Pricing extends React.Component {
     render(){
         return (
             <Page>
-                <section id="pricing" className="body-section">
-                    <div className="container">
-                        <div className="center">
+                <section id="pricing" class="body-section">
+                    <div class="container">
+                        <div class="center">
                             <h2>See our Pricings</h2>
-                            <p className="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
                         </div>
-                        <div className="gap"></div>
-                        <div id="pricing-table" className="row">
-                            <div className="col-md-3 col-xs-6">
-                                <ul className="plan plan1">
-                                    <li className="plan-name">
+                        <div class="gap"></div>
+                        <div id="pricing-table" class="row">
+                            <div class="col-md-3 col-xs-6">
+                                <ul class="plan plan1">
+                                    <li class="plan-name">
                                         <h3>Basic</h3>
                                     </li>
-                                    <li className="plan-price">
+                                    <li class="plan-price">
                                         <div>
-                                            <span className="price"><sup>$</sup>29</span>
+                                            <span class="price"><sup>$</sup>29</span>
                                             <small>month</small>
                                         </div>
                                     </li>
@@ -42,19 +42,19 @@ export default class Pricing extends React.Component {
                                     <li>
                                         <strong>Forum</strong> Support
                                     </li>
-                                    <li className="plan-action">
-                                        <a href="#" className="btn btn-primary btn-md">Signup</a>
+                                    <li class="plan-action">
+                                        <a href="#" class="btn btn-primary btn-md">Signup</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-md-3 col-xs-6">
-                                <ul className="plan plan2 featured">
-                                    <li className="plan-name">
+                            <div class="col-md-3 col-xs-6">
+                                <ul class="plan plan2 featured">
+                                    <li class="plan-name">
                                         <h3>Standard</h3>
                                     </li>
-                                    <li className="plan-price">
+                                    <li class="plan-price">
                                         <div>
-                                            <span className="price"><sup>$</sup>39</span>
+                                            <span class="price"><sup>$</sup>39</span>
                                             <small>month</small>
                                         </div>
                                     </li>
@@ -73,19 +73,19 @@ export default class Pricing extends React.Component {
                                     <li>
                                         <strong>Forum</strong> Support
                                     </li>
-                                    <li className="plan-action">
-                                        <a href="#" className="btn btn-primary btn-md">Signup</a>
+                                    <li class="plan-action">
+                                        <a href="#" class="btn btn-primary btn-md">Signup</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-md-3 col-xs-6">
-                                <ul className="plan plan3">
-                                    <li className="plan-name">
+                            <div class="col-md-3 col-xs-6">
+                                <ul class="plan plan3">
+                                    <li class="plan-name">
                                         <h3>Advanced</h3>
                                     </li>
-                                    <li className="plan-price">
+                                    <li class="plan-price">
                                         <div>
-                                            <span className="price"><sup>$</sup>49</span>
+                                            <span class="price"><sup>$</sup>49</span>
                                             <small>month</small>
                                         </div>
                                     </li>
@@ -104,19 +104,19 @@ export default class Pricing extends React.Component {
                                     <li>
                                         <strong>Forum</strong> Support
                                     </li>
-                                    <li className="plan-action">
-                                        <a href="#" className="btn btn-primary btn-md">Signup</a>
+                                    <li class="plan-action">
+                                        <a href="#" class="btn btn-primary btn-md">Signup</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-md-3 col-xs-6">
-                                <ul className="plan plan4">
-                                    <li className="plan-name">
+                            <div class="col-md-3 col-xs-6">
+                                <ul class="plan plan4">
+                                    <li class="plan-name">
                                         <h3>Mighty</h3>
                                     </li>
-                                    <li className="plan-price">
+                                    <li class="plan-price">
                                         <div>
-                                            <span className="price"><sup>$</sup>99</span>
+                                            <span class="price"><sup>$</sup>99</span>
                                             <small>month</small>
                                         </div>
                                     </li>
@@ -135,8 +135,8 @@ export default class Pricing extends React.Component {
                                     <li>
                                         <strong>Forum</strong> Support
                                     </li>
-                                    <li className="plan-action">
-                                        <a href="#" className="btn btn-primary btn-md">Signup</a>
+                                    <li class="plan-action">
+                                        <a href="#" class="btn btn-primary btn-md">Signup</a>
                                     </li>
                                 </ul>
                             </div>

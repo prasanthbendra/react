@@ -1,6 +1,11 @@
+var debug = process.env.NODE_ENV !== "production";
+var webpack = require('webpack');
+var path = require('path');
+
 module.exports = {
-    devtool: "inline-sourcemap",
-    entry: ['./client/client.js'],
+    context: path.join(__dirname, '../src'),
+    devtool: debug ? "inline-sourcemap" : null,
+    entry: ['../client/client.js'],
     output: {
         path: './dist',
         filename: 'bundle.js',
@@ -11,9 +16,13 @@ module.exports = {
             {
                 test: /.js$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/,
-                plugins: ['react-html-attrs', 'transform-class-properties', 'tranform-decorators-legacy']
+                exclude: /node_modules/
             }
         ]
-    }
+    },
+    plugins: debug ? [] : [
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+    ],
 }
