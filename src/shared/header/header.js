@@ -26,17 +26,17 @@ export default class Header extends React.Component {
                             <li className="dropdown">
                                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Pages <i className="icon-angle-down"></i></a>
                                 <ul className="dropdown-menu">
-                                    <li><a href="career.html">Career</a></li>
-                                    <li><a href="blog-item.html">Blog Single</a></li>
-                                    <li><a href="pricing.html">Pricing</a></li>
+                                    <li><Link to="career">Career</Link></li>
+                                    <li><Link to="blog">Blog Single</Link></li>
+                                    <li><Link to="pricing">Pricing</Link></li>
                                     <li><a href="404.html">404</a></li>
-                                    <li><a href="registration.html">Registration</a></li>
+                                    <li><Link to="registration">Registration</Link></li>
                                     <li className="divider"></li>
-                                    <li><a href="privacy.html">Privacy Policy</a></li>
-                                    <li><a href="terms.html">Terms of Use</a></li>
+                                    <li><Link to="privacy">Privacy Policy</Link></li>
+                                    <li><Link to="terms">Terms of Use</Link></li>
                                 </ul>
                             </li>
-                            <li><a href="blog.html">Blog</a></li>
+                            <li><Link to="blog">Blog</Link></li>
                             <li><Link to="contact">Contact</Link></li>
                         </ul>
                     </div>
