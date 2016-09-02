@@ -7,7 +7,7 @@ export default class Pricing extends React.Component {
 
     render(){
         return (
-            <Page>
+            <Page title="Pricing" description="Pellentesque habitant morbi tristique senectus et netus et malesuada">
                 <section id="pricing" class="body-section">
                     <div class="container">
                         <div class="center">

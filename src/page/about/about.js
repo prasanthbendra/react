@@ -7,7 +7,7 @@ export default class About extends React.Component {
 
     render(){
         return (
-            <Page>
+            <Page title="About" description="Pellentesque habitant morbi tristique senectus et netus et malesuada">
                 <section id="about-us" class="container body-section">
                     <div class="row">
                         <div class="col-sm-6">

@@ -7,7 +7,7 @@ export default class Contact extends React.Component {
 
     render(){
         return (
-            <Page>
+            <Page title="Contact" description="Pellentesque habitant morbi tristique senectus et netus et malesuada">
                 <section id="contact-page" class="container body-section">
                     <div class="row">
                         <div class="col-sm-8">

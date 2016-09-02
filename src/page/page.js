@@ -4,14 +4,15 @@ import { render } from 'react-dom';
 export default class Page extends React.Component {
 
     render(){
+        let {title, description} = this.props;
         return (
             <div>
                 <section id="title" class="emerald body-section">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h1>Services</h1>
-                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+                                <h1>{ title }</h1>
+                                <p>{ description }</p>
                             </div>
                             <div class="col-sm-6">
                                 <ul class="breadcrumb pull-right">

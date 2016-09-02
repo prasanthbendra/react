@@ -1,3 +1,4 @@
+import Page from './page';
 import About from './about/about';
 import Services from './services/services';
 import Portfolio from './portfolio/portfolio';
@@ -10,6 +11,7 @@ import Terms from './terms/terms';
 import Blog from './contact/contact';
 
 export {
+    Page,
     About,
     Services,
     Portfolio,

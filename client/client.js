@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 import App from '../src/app';
 import Home from '../src/home/home';
+import Blog from '../src/blog/blog';
 import {
     About,
     Services,
@@ -13,8 +14,7 @@ import {
     Pricing,
     Registration,
     Privacy,
-    Terms,
-    Blog
+    Terms
 } from '../src/page';
 
 render(
@@ -30,7 +30,7 @@ render(
             <Route path="registration" component={Registration}></Route>
             <Route path="privacy" component={Privacy}></Route>
             <Route path="terms" component={Terms}></Route>
-            <Route path="blog(/:blogTitle)" component={Blog}></Route>
+            <Route path="blog(/:title)" component={Blog}></Route>
         </Route>
     </Router>,
     document.getElementById('app')

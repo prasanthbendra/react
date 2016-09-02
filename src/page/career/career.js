@@ -7,7 +7,7 @@ export default class Career extends React.Component {
 
     render(){
         return (
-            <Page>
+            <Page title="Career" description="Pellentesque habitant morbi tristique senectus et netus et malesuada">
                 <section id="career" class="container body-section">
                     <div class="center">
                         <h2>Pellentesque habitant morbi tristique senectus et netus</h2>

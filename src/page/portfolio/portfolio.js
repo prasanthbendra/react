@@ -7,7 +7,7 @@ export default class Portfolio extends React.Component {
 
     render(){
         return (
-            <Page>
+            <Page title="Portfolio" description="Pellentesque habitant morbi tristique senectus et netus et malesuada">
                 <section id="portfolio" class="container body-section">
                     <ul class="portfolio-filter">
                         <li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>

@@ -7,7 +7,7 @@ export default class Services extends React.Component {
 
     render(){
         return (
-            <Page>
+            <Page title="Services" description="Pellentesque habitant morbi tristique senectus et netus et malesuada">
                 <section id="services" class="body-section">
                     <div class="container">
                         <div class="row">
