@@ -62,7 +62,6 @@ export default class Works extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
 
                                     <div class="item">

@@ -1,0 +1,43 @@
+{
+    "data": [{
+        "id": 1,
+        "title": "Basic",
+        "price": 29,
+        "storage": 5,
+        "ram": 1,
+        "bandwidth": 400,
+        "emails": 10,
+        "forumSupport": true,
+        "featured": false
+    }, {
+        "id": 2,
+        "title": "Standard",
+        "price": 39,
+        "storage": 5,
+        "ram": 1,
+        "bandwidth": 400,
+        "emails": 10,
+        "forumSupport": true,
+        "featured": false
+    }, {
+        "id": 3,
+        "title": "Advanced",
+        "price": 49,
+        "storage": 50,
+        "ram": 8,
+        "bandwidth": 1024,
+        "emails": "Unlimited",
+        "forumSupport": true,
+        "featured": false
+    }, {
+        "id": 4,
+        "title": "Mighty",
+        "price": 79,
+        "storage": 50,
+        "ram": 8,
+        "bandwidth": 1024,
+        "emails": "Unlimited",
+        "forumSupport": true,
+        "featured": true
+    }]
+}
