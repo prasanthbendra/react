@@ -6,50 +6,34 @@ import PricingItem from './pricing-item';
 
 export default class Pricing extends React.Component {
 
-    render(){
-        const pricingItems = [{
-            id: 1,
-            title: "Basic",
-            price: 29,
-            storage: 5,
-            ram: 1,
-            bandwidth: 400,
-            emails: 10,
-            forumSupport: true,
-            featured: false
-        }, {
-            id: 2,
-            title: "Standard",
-            price: 39,
-            storage: 5,
-            ram: 1,
-            bandwidth: 400,
-            emails: 10,
-            forumSupport: true,
-            featured: false
-        }, {
-            id: 3,
-            title: "Advanced",
-            price: 49,
-            storage: 50,
-            ram: 8,
-            bandwidth: 1024,
-            emails: "Unlimited",
-            forumSupport: true,
-            featured: false
-        }, {
-            id: 4,
-            title: "Mighty",
-            price: 79,
-            storage: 50,
-            ram: 8,
-            bandwidth: 1024,
-            emails: "Unlimited",
-            forumSupport: true,
-            featured: true
-        }];
+    constructor(){
+        super();
 
-        const pricing = pricingItems.map( (pricingItem) => <PricingItem key={ pricingItem.id } pricing={ pricingItem } />);
+        console.log('constructor');
+        this.state = {
+            pricingItems: []
+        };
+    }
+
+    componentDidMount(){
+        console.log('componentDidMount');
+        fetch('/api/pricing')
+            .then( (res) => res.json() )
+            .then( (res) => {
+                this.setState({
+                    pricingItems: res.data
+                })
+            })
+            .catch( (error)=> console.log(error));
+    }
+
+    componentWillUnmount(){
+        console.log('componentWillUnmount');
+    }
+
+    render(){
+
+        const pricing = this.state.pricingItems.map( (pricingItem) => <PricingItem key={ pricingItem.id } pricing={ pricingItem } />);
 
         return (
             <Page title="Pricing" description="Pellentesque habitant morbi tristique senectus et netus et malesuada">

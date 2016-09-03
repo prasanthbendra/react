@@ -5,28 +5,34 @@ import Service from './service'
 
 export default class Services extends React.Component {
 
+    constructor(){
+        super();
+
+        console.log('constructor');
+        this.state = {
+            services: []
+        };
+    }
+
+    componentDidMount(){
+        console.log('componentDidMount');
+        fetch('/api/marketing')
+            .then( (res) => res.json() )
+            .then( (res) => {
+                this.setState({
+                    services: res.data
+                })
+            })
+            .catch( (error)=> console.log(error));
+    }
+
+    componentWillUnmount(){
+        console.log('componentWillUnmount');
+    }
+
     render(){
-        const services = [{
-            id: 1,
-            title: "Twitter Marketing",
-            icon: "icon-twitter",
-            description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae."
-        },
-        {
-            id: 2,
-            title: "Facebook Marketing",
-            icon: "icon-facebook",
-            description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae."
-        },
-        {
-            id: 3,
-            title: "Google Plus Marketing",
-            icon: "icon-google-plus",
-            description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae."
-        }];
 
-        const service = services.map( (service) => <Service key={ service.id } service={ service } /> );
-
+        const service = this.state.services.map( (service) => <Service key={ service.id } service={ service } /> );
 
         return (
             <section id="services" class="emerald body-section">
