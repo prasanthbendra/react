@@ -1,19 +1,22 @@
 export default (state = {
-        pricing: [],
+        services: [],
+        slider: [],
+        testimonials: [],
+        works: [],
         fetching: false,
         fetched: false,
         error: null
     }, action) => {
 
-    switch(action.type){
-        case "FETCH_PRICING": {
+    switch (action.type){
+        case "FETCH_SERVICES": {
             return {
                 ...state,
                 fetching: true
             }
             break;
         }
-        case "FETCH_PRICING_REJECTED": {
+        case "FETCH_SERVICES_REJECTED": {
             return {
                 ...state,
                 fetching: false,
@@ -21,23 +24,16 @@ export default (state = {
             }
             break;
         }
-        case "FETCH_PRICING_FULFILLED": {
+        case "FETCH_SERVICES_FULFILLED": {
             return {
                 ...state,
                 fetching: false,
                 fetched: true,
-                pricing: action.payload.data
-            }
-            break;
-        }
-        case "ADD_PRICING": {
-            return {
-                ...state,
-                pricing: action.payload
+                services: action.payload.data
             }
             break;
         }
     }
 
     return state;
-};
+}

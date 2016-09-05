@@ -14,14 +14,7 @@ export default class Services extends React.Component {
     }
 
     componentDidMount(){
-        fetch('/api/marketing')
-            .then( (res) => res.json() )
-            .then( (res) => {
-                this.setState({
-                    services: res.data
-                })
-            })
-            .catch( (error)=> console.log(error));
+
     }
 
     componentWillUnmount(){
@@ -29,8 +22,10 @@ export default class Services extends React.Component {
     }
 
     render(){
-
-        const service = this.state.services.map( (service) => <Service key={ service.id } service={ service } /> );
+        let service = "";
+        if(!!this.props.services){
+            service = this.props.services.map( (service) => <Service key={ service.id } service={ service } /> );
+        }
 
         return (
             <section id="services" class="emerald body-section">
