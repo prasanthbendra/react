@@ -1,18 +1,51 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { connect } from 'react-redux';
 
 import Page from '../page';
+import AboutTeam from './about-team';
+import * as Action from './about-action';
 
+@connect((store)=>{
+    return {
+        about: store.about.about,
+        team: store.about.team
+    }
+})
 export default class About extends React.Component {
 
+    constructor(){
+        super();
+
+    }
+
+    componentDidMount(){
+        this.props.dispatch(Action.fetchAbout());
+        this.props.dispatch(Action.fetchTeam());
+    }
+
+    componentWillUnmount(){
+
+    }
+
     render(){
+        let about = "";
+        let team = "";
+        if( !!this.props.about ){
+            about = this.props.about.data;
+        }
+        if( !!this.props.team.data ){
+            let teamItems = this.props.team.data;
+            team = teamItems.map( (teamItem) => <AboutTeam key={ teamItem.id } team={ teamItem } />);
+        }
+
         return (
             <Page title="About" description="Pellentesque habitant morbi tristique senectus et netus et malesuada">
                 <section id="about-us" class="container body-section">
                     <div class="row">
                         <div class="col-sm-6">
                             <h2>What we are</h2>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                            <p>{ about }</p>
                         </div>
                         <div class="col-sm-6">
                             <h2>Our Skills</h2>
@@ -52,39 +85,7 @@ export default class About extends React.Component {
                     <div class="gap"></div>
 
                     <div id="meet-the-team" class="row">
-                        <div class="col-md-3 col-xs-6">
-                            <div class="center">
-                                <p><img class="img-responsive img-thumbnail img-circle" src="images/team-member.jpg" alt="" /></p>
-                                <h5>David J. Robbins<small class="designation muted">Senior Vice President</small></h5>
-                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                                <a class="btn btn-social btn-facebook" href="#"><i class="icon-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="icon-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="icon-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="icon-linkedin"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-xs-6">
-                            <div class="center">
-                                <p><img class="img-responsive img-thumbnail img-circle" src="images/team-member.jpg" alt="" /></p>
-                                <h5>David J. Robbins<small class="designation muted">Senior Vice President</small></h5>
-                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                                <a class="btn btn-social btn-facebook" href="#"><i class="icon-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="icon-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="icon-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="icon-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-xs-6">
-                            <div class="center">
-                                <p><img class="img-responsive img-thumbnail img-circle" src="images/team-member.jpg" alt="" /></p>
-                                <h5>David J. Robbins<small class="designation muted">Senior Vice President</small></h5>
-                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                                <a class="btn btn-social btn-facebook" href="#"><i class="icon-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="icon-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="icon-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="icon-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-xs-6">
-                            <div class="center">
-                                <p><img class="img-responsive img-thumbnail img-circle" src="images/team-member.jpg" alt="" /></p>
-                                <h5>David J. Robbins<small class="designation muted">Senior Vice President</small></h5>
-                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                                <a class="btn btn-social btn-facebook" href="#"><i class="icon-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="icon-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="icon-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="icon-linkedin"></i></a>
-                            </div>
-                        </div>
+                        { team }
                     </div>
                 </section>
             </Page>

@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "David J. Robbins",
+            "designation": "Senior Vice President",
+            "text": "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.",
+            "pic": "images/team-member.jpg"
+        },
+        {
+            "id": 2,
+            "name": "John Doe",
+            "designation": "Vice President",
+            "text": "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.",
+            "pic": "images/team-member.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Jane Doe",
+            "designation": "Vice President",
+            "text": "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.",
+            "pic": "images/team-member.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Robbins",
+            "designation": "AVP",
+            "text": "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.",
+            "pic": "images/team-member.jpg"
+        }
+    ]
+}

@@ -18,6 +18,20 @@ app.get('/api/marketing', function(req, res) {
     });
 });
 
+app.get('/api/about', function(req, res) {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    fs.readFile('data/about-about.json', function(err, data) {
+        res.end(data);
+    });
+});
+
+app.get('/api/team', function(req, res) {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    fs.readFile('data/about-team.json', function(err, data) {
+        res.end(data);
+    });
+});
+
 app.get('/api/pricing', function(req, res) {
     res.writeHead(200, { "Content-Type": "application/json" });
     fs.readFile('data/pricing.json', function(err, data) {
