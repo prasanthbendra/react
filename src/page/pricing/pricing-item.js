@@ -4,6 +4,11 @@ import classNames from 'classnames';
 
 export default class PricingItem extends React.Component {
 
+    handleSingup(){
+        const { pricing } = this.props;
+        console.log('signup: ', pricing.id);
+    }
+
     render(){
         const { pricing } = this.props;
         const { id, forumSupport, featured } = pricing;
@@ -17,32 +22,20 @@ export default class PricingItem extends React.Component {
         return (
             <div class="col-md-3 col-xs-6">
                 <ul class={ classes }>
-                    <li class="plan-name">
-                        <h3>{ pricing.title }</h3>
-                    </li>
+                    <li class="plan-name"><h3>{ pricing.title }</h3></li>
                     <li class="plan-price">
                         <div>
                             <span class="price"><sup>$</sup>{ pricing.price }</span>
                             <small>month</small>
                         </div>
                     </li>
-                    <li>
-                        <strong>{ pricing.storage }GB</strong> Storage
-                    </li>
-                    <li>
-                        <strong>{ pricing.ram }GB</strong> RAM
-                    </li>
-                    <li>
-                        <strong>{ pricing.bandwidth }GB</strong> Bandwidth
-                    </li>
-                    <li>
-                        <strong>{ pricing.email }</strong> Email Address
-                    </li>
-                    <li>
-                        <strong>Forum</strong> Support
-                    </li>
+                    <li><strong>{ pricing.storage }GB</strong> Storage </li>
+                    <li><strong>{ pricing.ram }GB</strong> RAM </li>
+                    <li><strong>{ pricing.bandwidth }GB</strong> Bandwidth </li>
+                    <li><strong>{ pricing.email }</strong> Email Address </li>
+                    <li><strong>Forum</strong> Support </li>
                     <li class="plan-action">
-                        <a href="#" class="btn btn-primary btn-md">Signup</a>
+                        <a class="btn btn-primary btn-md" onClick={this.handleSingup.bind(this)}>Signup</a>
                     </li>
                 </ul>
             </div>

@@ -8,14 +8,12 @@ export default class Services extends React.Component {
     constructor(){
         super();
 
-        console.log('constructor');
         this.state = {
             services: []
         };
     }
 
     componentDidMount(){
-        console.log('componentDidMount');
         fetch('/api/marketing')
             .then( (res) => res.json() )
             .then( (res) => {
@@ -27,7 +25,7 @@ export default class Services extends React.Component {
     }
 
     componentWillUnmount(){
-        console.log('componentWillUnmount');
+        //console.log('componentWillUnmount');
     }
 
     render(){

@@ -1,39 +1,37 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { connect } from 'react-redux';
 
 import Page from '../page';
 import PricingItem from './pricing-item';
+import * as Action from './pricing-action';
+
+@connect((store) => {
+    return {
+        pricing: store.pricing.pricing
+    }
+})
 
 export default class Pricing extends React.Component {
 
     constructor(){
         super();
-
-        console.log('constructor');
-        this.state = {
-            pricingItems: []
-        };
     }
 
     componentDidMount(){
-        console.log('componentDidMount');
-        fetch('/api/pricing')
-            .then( (res) => res.json() )
-            .then( (res) => {
-                this.setState({
-                    pricingItems: res.data
-                })
-            })
-            .catch( (error)=> console.log(error));
+        this.props.dispatch(Action.fetchPricing());
     }
 
     componentWillUnmount(){
-        console.log('componentWillUnmount');
+        //console.log('componentWillUnmount');
     }
 
     render(){
-
-        const pricing = this.state.pricingItems.map( (pricingItem) => <PricingItem key={ pricingItem.id } pricing={ pricingItem } />);
+        let pricing = "";
+        if( !!this.props.pricing.data ){
+            let pricingItems = this.props.pricing.data;
+            pricing = pricingItems.map( (pricingItem) => <PricingItem key={ pricingItem.id } pricing={ pricingItem } />);
+        }
 
         return (
             <Page title="Pricing" description="Pellentesque habitant morbi tristique senectus et netus et malesuada">
