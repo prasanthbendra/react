@@ -8,11 +8,11 @@ import Footer from './shared/footer/footer';
 export default class App extends React.Component {
 
     render(){
-        const { children } = this.props;
+        const { children, location } = this.props;
 
         return (
             <div>
-                <Header/>
+                <Header location={ location }/>
                 { children }
                 <Bottom/>
                 <Footer/>
