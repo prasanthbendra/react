@@ -9,6 +9,7 @@ import Registration from './contact/contact';
 import Privacy from './privacy/privacy';
 import Terms from './terms/terms';
 import Blog from './contact/contact';
+import NotFound from './not-found/not-found';
 
 export {
     Page,
@@ -21,5 +22,6 @@ export {
     Registration,
     Privacy,
     Terms,
-    Blog
+    Blog,
+    NotFound
 }
