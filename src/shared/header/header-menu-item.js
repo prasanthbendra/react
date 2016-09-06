@@ -11,6 +11,7 @@ export default class HeaderMenuItem extends React.Component {
             'active': menuItem.to == location.pathname.replace(/\//g, "")
         });
 
+
         return (
 
             <li class={ classes } ><Link to={ menuItem.to }>{ menuItem.text }</Link></li>
