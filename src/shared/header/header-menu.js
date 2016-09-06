@@ -97,7 +97,7 @@ export default class HeaderMenu extends React.Component {
                 })
                 menu = (
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{ menuItem.text } <i class="icon-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             { menuChildren }
                         </ul>
