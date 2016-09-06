@@ -4,7 +4,7 @@
   "description": "React POC",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./src/**/*spec.js --compilers js:babel-core/register --recursive",
+    "test": "mocha ./src/**/*.spec.js --compilers js:babel-core/register --watch --recursive",
     "serve": "nodemon server/server.js",
     "build": "webpack --config webpack/webpack.config.js --progress --colors --watch"
   },
