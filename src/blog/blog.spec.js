@@ -5,11 +5,12 @@ import { createRenderer } from 'react-addons-test-utils';
 import React from 'react';
 import { Provider } from 'react-redux';
 
-import store from '../../store'
-import Pricing from './pricing';
+import { Page } from '../page';
+import Blog from './blog';
 
 describe("Pricing component", () => {
     it("Should render", () => {
-    	//const wraper = shallow(<Pricing />);
+    	const wraper = shallow(<Blog />);
+    	console.log(wraper);
     });
 })

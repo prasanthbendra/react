@@ -4,7 +4,7 @@
   "description": "React POC",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./src/**/*.spec.js --compilers js:babel-core/register --watch --recursive",
+    "test": "mocha ./src/**/*.spec.js --require ./test/helper.js --compilers js:babel-core/register --watch --recursive",
     "serve": "nodemon server/server.js",
     "build": "webpack --config webpack/webpack.config.js --progress --colors --watch"
   },
@@ -46,8 +46,12 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "chai": "^3.5.0",
+    "chai-enzyme": "^0.5.1",
+    "cheerio": "^0.20.0",
     "classnames": "^2.2.5",
+    "enzyme": "^2.4.1",
     "mocha": "^3.0.2",
+    "react-addons-test-utils": "^15.3.1",
     "webpack": "^1.13.2"
   }
 }

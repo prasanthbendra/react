@@ -6,7 +6,6 @@ import { Page } from '../page';
 export default class Blog extends React.Component {
 
     render(){
-        const { title } = this.props.params;
 
         return (
             <Page title="Blog" description="Pellentesque habitant morbi tristique senectus et netus et malesuada">
