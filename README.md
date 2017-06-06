@@ -16,3 +16,5 @@ https://www.youtube.com/watch?v=-sxzpUqMmng&index=15&list=PLy7nqAGjMx2m5EVJQP_l_
 https://www.youtube.com/watch?v=O8z0F8Lqz1k&index=17&list=PLuNEz8XtB51K-x3bwCC9uNM_cxXaiCcRY
 
 https://tylermcginnis.com/react-interview-questions/
+
+https://www.youtube.com/watch?v=5Knp04GZAj8
