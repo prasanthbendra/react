@@ -18,3 +18,10 @@ https://www.youtube.com/watch?v=O8z0F8Lqz1k&index=17&list=PLuNEz8XtB51K-x3bwCC9u
 https://tylermcginnis.com/react-interview-questions/
 
 https://www.youtube.com/watch?v=5Knp04GZAj8
+
+
+
+
+
+
+https://stackoverflow.com/questions/26708822/why-do-vim-experts-prefer-buffers-over-tabs
