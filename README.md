@@ -39,3 +39,43 @@ Additionally, this project supports the shift towards the Client-Centric platfor
 http://www.blog.bdauria.com/?p=692
 https://github.com/magarcia/vim-angular2-snippets
 
+
+ set number
+ set relativenumber
+
+ set hidden
+
+ set backup
+ set backupdir=C:\WINDOWS\Temp
+ set backupskip=C:\WINDOWS\Temp\*
+ set directory=C:\WINDOWS\Temp
+ set writebackup
+
+ set statusline=   " clear the statusline for when vimrc is reloaded
+ set statusline+=%-3.3n\                      " buffer number
+ set statusline+=%f\                          " file name
+ set statusline+=%h%m%r%w                     " flags
+ set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
+ set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
+ set statusline+=%{&fileformat}]              " file format
+ set statusline+=%=                           " right align
+ set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
+ set statusline+=%b,0x%-8B\                   " current char
+ set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
+
+ set expandtab
+ set shiftwidth=2
+ set softtabstop=2
+
+ set path+=**
+ set wildmenu
+
+ filetype plugin on
+ syntax on
+
+ filetype on
+ au BufNewFile,BufRead *.ts set filetype=javascript
+
+
+
+
