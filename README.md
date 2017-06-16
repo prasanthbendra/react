@@ -35,3 +35,6 @@ The redesigned account opening process was constructed to support future enhance
 
 Additionally, this project supports the shift towards the Client-Centric platform strategy, making it easier for advisors to holistically service their clients and improving efficiency of downstream processes. This project includes party-centric management of ancillary individuals and positions the platform for future opportunities such as client-level documents, approvals and EDD. 
 
+
+http://www.blog.bdauria.com/?p=692
+
