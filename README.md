@@ -47,6 +47,7 @@ lifecycle hooks
 modules
 Change detection - zone
 rxjs
+There is an API for acquiring a child reference. Check out Query, QueryList, ViewChildren, and ContentChildren in the API Reference.
 
 
 
