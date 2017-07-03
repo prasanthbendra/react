@@ -39,6 +39,8 @@ Additionally, this project supports the shift towards the Client-Centric platfor
 http://www.blog.bdauria.com/?p=692
 https://github.com/magarcia/vim-angular2-snippets
 
+https://stackoverflow.com/questions/39678963/load-existing-components-dynamically-angular-2-final-release
+
 Angular2
 ===========
 Routing
