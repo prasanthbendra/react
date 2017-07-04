@@ -52,6 +52,8 @@ rxjs
 typescript
 There is an API for acquiring a child reference. Check out Query, QueryList, ViewChildren, and ContentChildren in the API Reference.
 
+https://blog.lacolaco.net/post/dynamic-component-creation-in-angular-2/
+
 
 
 
