@@ -54,6 +54,8 @@ There is an API for acquiring a child reference. Check out Query, QueryList, Vie
 
 https://blog.lacolaco.net/post/dynamic-component-creation-in-angular-2/
 
+https://hackernoon.com/everything-you-need-to-know-about-change-detection-in-angular-8006c51d206f
+
 
 
 
