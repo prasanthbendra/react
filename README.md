@@ -56,6 +56,8 @@ https://blog.lacolaco.net/post/dynamic-component-creation-in-angular-2/
 
 https://hackernoon.com/everything-you-need-to-know-about-change-detection-in-angular-8006c51d206f
 
+https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9
+
 
 
 
